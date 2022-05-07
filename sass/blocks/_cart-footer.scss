@@ -8,9 +8,23 @@
 
 	display: grid;
 	grid-template-columns: 5fr 3fr 4fr;
+	column-gap: 30px;
+
+	@media (max-width: $mobile) {
+		padding-left: 15px;
+		padding-right: 15px;
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: $mobile-xs) {
+		grid-template-columns: 1fr;
+		row-gap: 15px;
+	}
 
 	// .cart-footer__count
 	&__count {
 		grid-column-start: 2;
+		@media (max-width: $mobile) {
+			grid-column-start: 1;
+		}
 	}
 }
